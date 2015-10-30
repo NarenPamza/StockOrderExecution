@@ -74,7 +74,7 @@ public class StockOrderManager
 	 * @param quantity
 	 *            Number of Stocks
 	 */
-	public void createOrder(String side, String companyName, int quantity)
+	public boolean createOrder(String side, String companyName, int quantity)
 	{
 		try
 		{
@@ -102,6 +102,7 @@ public class StockOrderManager
 			new StockOrderException("Exception while creating the Stock Order",
 					exception);
 		}
+		return true;
 	}
 
 	/**
